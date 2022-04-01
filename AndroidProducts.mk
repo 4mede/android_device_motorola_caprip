@@ -4,4 +4,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/pixelage_caprip.mk
+    $(LOCAL_DIR)/aosp_caprip.mk
