@@ -30,6 +30,12 @@ PRODUCT_PACKAGES += \
     init.oem.fingerprint2.sh \
     init.mmi.overlay.rc
 
+# Moto Camera 3
+TARGET_MOTCAMERA3 := caprip
+TARGET_USES_MOTCAMERA3 := true
+
+$(call inherit-product, vendor/motorola/MotCamera3/motcamera3.mk)
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.bengal
