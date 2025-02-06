@@ -8,7 +8,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from device
+<<<<<<< HEAD:pixelage_caprip.mk
 $(call inherit-product, device/motorola/caprip/device.mk)
+
+# Inherit some common Pixelage stuff.
+$(call inherit-product, vendor/pixelage/config/common_full_phone.mk)
+
+# Boot animation
+TARGET_BOOT_ANIMATION_RES := 720
+
+# Pixelage
+TARGET_FACE_UNLOCK_SUPPORTED := true
+>>>>>>> e91245c (guamp: adjust boot animation res):pixelage_guamp.mk
 
 # Inherit from ViPER4AndroidFX
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
