@@ -76,9 +76,6 @@ $(foreach DEVICE_SKU, $(DEVICE_COMPASS_SKUS), \
 BOARD_SHIPPING_API_LEVEL := 30
 PRODUCT_SHIPPING_API_LEVEL := 30
 
-#Signing
-$(call inherit-product, vendor/pixelage-priv/config/common.mk)
-
 # Signing
 $(call inherit-product, vendor/pixelos-priv/config/common.mk)
 
