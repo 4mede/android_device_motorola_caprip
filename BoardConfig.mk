@@ -38,10 +38,6 @@ PRODUCT_COPY_FILES += \
 # Fix prebuilt build
 $(shell mkdir -p $(OUT_DIR)/target/product/caprip/obj/KERNEL_OBJ/usr)
 
-# Kernel Modules - Vendor Boot
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/vendor_boot.modules.load))
-BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD)
-
 # Partitions
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
 

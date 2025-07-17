@@ -84,13 +84,11 @@ if [ $fps == $fps_vendor2 ]; then
         log "remove FPC driver"
         rmmod fpc1020_mmi
         log "- install chipone driver"
-        insmod /vendor/lib/modules/fpsensor_spi_tee.ko
         fps=$FPS_VENDOR_CHIPONE
     else
         log "remove chipone driver"
         rmmod fpsensor_spi_tee
         log "- install fpc driver"
-        insmod /vendor/lib/modules/fpc1020_mmi.ko
         fps=$FPS_VENDOR_FPC
     fi
     log "- update FPS vendor"

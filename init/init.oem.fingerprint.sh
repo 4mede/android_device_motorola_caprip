@@ -28,7 +28,6 @@ MAX_TIMES=20
 
 function ident_fps {
     log "- install FPC driver"
-    insmod /vendor/lib/modules/fpc1020_mmi.ko
     sleep 1
     log "- identify FPC sensor"
     setprop $PROP_FPS_IDENT ""
@@ -51,7 +50,6 @@ function ident_fps {
     done
 
     log "- install Chipone driver"
-    insmod /vendor/lib/modules/fpsensor_spi_tee.ko
     echo $FPS_VENDOR_CHIPONE > $persist_fps_id
     return 0
 }
@@ -67,13 +65,11 @@ log "FPS vendor: $fps_vendor"
 
 if [ $fps_vendor == $FPS_VENDOR_CHIPONE ]; then
     log "- install Chipone driver"
-    insmod /vendor/lib/modules/fpsensor_spi_tee.ko
     return $?
 fi
 
 if [ $fps_vendor == $FPS_VENDOR_FPC ]; then
     log "- install FPC driver"
-    insmod /vendor/lib/modules/fpc1020_mmi.ko
     return $?
 fi
 
