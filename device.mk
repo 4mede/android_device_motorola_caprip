@@ -28,6 +28,10 @@ PRODUCT_PACKAGES += \
     init.oem.fingerprint.sh \
     init.oem.fingerprint2.sh \
     init.mmi.overlay.rc
+    
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout
 
 # Lights
 PRODUCT_PACKAGES += \
